@@ -34,7 +34,7 @@ Route::middleware(['auth', 'verified'])
 ->group(function(){
 
   Route::get('/', [DashboardController::class, 'index'])->name('home');
-
+  Route::resource('posts', PostController::class);
 });
 
 
